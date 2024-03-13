@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -42,291 +41,429 @@ class MyPage extends StatelessWidget {
           )
         ],
       ),
-      body: Container( //
-        color: Colors.grey,
-        child: Column(
-          children: [
-            Container(
-              child: Row(
-                children: [
-                  Container(
-                    color: Colors.white,
-                    width: MediaQuery.of(context).size.width * 0.5 - 15,
-                    height: MediaQuery.of(context).size.width * 0.5 - 10,
-                    margin: EdgeInsets.only(left: 10, right: 5, top: 10 ,bottom: 5),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.centerRight,
-                          color: Colors.white,
-                          child: Icon(Icons.more_horiz),
-                        ),
-                        Stack(
-                          children: [
-                            Container(
-                            width: 60,
-                            height: 60,
-                            decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(60.0),
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
-                              )
-                            )
+      body: ListView(
+        children:[ Container( //
+          color: Colors.grey,
+          child: Column(
+            children: [
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width * 0.5 - 15,
+                      height: MediaQuery.of(context).size.width * 0.5 - 10,
+                      margin: EdgeInsets.only(left: 10, right: 5, top: 10 ,bottom: 5),
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.centerRight,
+                            color: Colors.white,
+                            child: Icon(Icons.more_horiz),
                           ),
-                            Positioned(
-                              top: 0,
-                              right: 0,
-                              child: Container(
-                                width: 20,
-                                height: 20,
-                                decoration: BoxDecoration(
-                                    color: Colors.green,
-                                     borderRadius: BorderRadius.circular(10.0),
-                                    border: Border.all(width: 4.0, color: Colors.white)
-                                ),
-                              ),
-                            )
-                          ]
-                        ),
-                        Container(
-                          child: Text("Clarie Wilson"),
-                        ),
-                        Container(
-                          child: Row(
+                          Stack(
                             children: [
                               Container(
-                                color: Colors.white,
-                                width: 60,
-                                height: 55,
-                                margin: EdgeInsets.only(left: 15, right: 5),
-                                child: Icon(Icons.person_2_sharp
-                                ),
-                              ),
-                              Container(color: Colors.white,
-                                width: 60,
-                                height: 55,
-                                margin: EdgeInsets.only(left: 5, right: 15),
-                                child: Icon(Icons.message)
+                              width: 60,
+                              height: 60,
+                              decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(60.0),
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
+                                )
                               )
-                            ],
+                            ),
+                              Positioned(
+                                top: 0,
+                                right: 0,
+                                child: Container(
+                                  width: 20,
+                                  height: 20,
+                                  decoration: BoxDecoration(
+                                      color: Colors.green,
+                                       borderRadius: BorderRadius.circular(10.0),
+                                      border: Border.all(width: 4.0, color: Colors.white)
+                                  ),
+                                ),
+                              )
+                            ]
                           ),
-                        ),
-                      ],
+                          Container(
+                            child: Text("Clarie Wilson"),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Container(
+                                  color: Colors.white,
+                                  width: 60,
+                                  height: 55,
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  child: Icon(Icons.person_2_sharp
+                                  ),
+                                ),
+                                Container(color: Colors.white,
+                                  width: 60,
+                                  height: 55,
+                                  margin: EdgeInsets.only(left: 5, right: 15),
+                                  child: Icon(Icons.message)
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Container(
-                    color: Colors.white,
+                    Container(
+                      color: Colors.white,
+                        width: MediaQuery.of(context).size.width * 0.5 - 15,
+                        height: MediaQuery.of(context).size.width * 0.5 - 10,
+                        margin: EdgeInsets.only(left: 5, right: 10, top: 10 ,bottom: 5),
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.centerRight,
+                            color: Colors.white,
+                            child: Icon(Icons.more_horiz),
+                          ),
+                          Stack(
+                              children: [
+                                Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(60.0),
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
+                                        )
+                                    )
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 20,
+                                    height: 20,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(10.0),
+                                        border: Border.all(width: 4.0, color: Colors.white)
+                                    ),
+                                  ),
+                                )
+                              ]
+                          ),
+                          Container(
+                            child: Text("Clarie Wilson"),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Container(
+                                  color: Colors.white,
+                                  width: 60,
+                                  height: 55,
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  child: Icon(Icons.person_2_sharp
+                                  ),
+                                ),
+                                Container(color: Colors.white,
+                                    width: 60,
+                                    height: 55,
+                                    margin: EdgeInsets.only(left: 5, right: 15),
+                                    child: Icon(Icons.message)
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width * 0.5 - 15,
+                      height: MediaQuery.of(context).size.width * 0.5 - 10,
+                      margin: EdgeInsets.only(left: 10, right: 5, top: 10 ,bottom: 5),
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.centerRight,
+                            color: Colors.white,
+                            child: Icon(Icons.more_horiz),
+                          ),
+                          Stack(
+                              children: [
+                                Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(60.0),
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
+                                        )
+                                    )
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 20,
+                                    height: 20,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(10.0),
+                                        border: Border.all(width: 4.0, color: Colors.white)
+                                    ),
+                                  ),
+                                )
+                              ]
+                          ),
+                          Container(
+                            child: Text("Clarie Wilson"),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Container(
+                                  color: Colors.white,
+                                  width: 60,
+                                  height: 55,
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  child: Icon(Icons.person_2_sharp
+                                  ),
+                                ),
+                                Container(color: Colors.white,
+                                    width: 60,
+                                    height: 55,
+                                    margin: EdgeInsets.only(left: 5, right: 15),
+                                    child: Icon(Icons.message)
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
                       width: MediaQuery.of(context).size.width * 0.5 - 15,
                       height: MediaQuery.of(context).size.width * 0.5 - 10,
                       margin: EdgeInsets.only(left: 5, right: 10, top: 10 ,bottom: 5),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.centerRight,
-                          color: Colors.white,
-                          child: Icon(Icons.more_horiz),
-                        ),
-                        Stack(
-                            children: [
-                              Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(60.0),
-                                      image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
-                                      )
-                                  )
-                              ),
-                              Positioned(
-                                top: 0,
-                                right: 0,
-                                child: Container(
-                                  width: 20,
-                                  height: 20,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(10.0),
-                                      border: Border.all(width: 4.0, color: Colors.white)
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.centerRight,
+                            color: Colors.white,
+                            child: Icon(Icons.more_horiz),
+                          ),
+                          Stack(
+                              children: [
+                                Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(60.0),
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
+                                        )
+                                    )
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 20,
+                                    height: 20,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(10.0),
+                                        border: Border.all(width: 4.0, color: Colors.white)
+                                    ),
                                   ),
-                                ),
-                              )
-                            ]
-                        ),
-                        Container(
-                          child: Text("Clarie Wilson"),
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Container(
-                                color: Colors.white,
-                                width: 60,
-                                height: 55,
-                                margin: EdgeInsets.only(left: 15, right: 5),
-                                child: Icon(Icons.person_2_sharp
-                                ),
-                              ),
-                              Container(color: Colors.white,
+                                )
+                              ]
+                          ),
+                          Container(
+                            child: Text("Clarie Wilson"),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Container(
+                                  color: Colors.white,
                                   width: 60,
                                   height: 55,
-                                  margin: EdgeInsets.only(left: 5, right: 15),
-                                  child: Icon(Icons.message)
-                              )
-                            ],
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  child: Icon(Icons.person_2_sharp
+                                  ),
+                                ),
+                                Container(color: Colors.white,
+                                    width: 60,
+                                    height: 55,
+                                    margin: EdgeInsets.only(left: 5, right: 15),
+                                    child: Icon(Icons.message)
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Container(
-              child: Row(
-                children: [
-                  Container(
-                    color: Colors.white,
-                    width: MediaQuery.of(context).size.width * 0.5 - 15,
-                    height: MediaQuery.of(context).size.width * 0.5 - 10,
-                    margin: EdgeInsets.only(left: 10, right: 5, top: 10 ,bottom: 5),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.centerRight,
-                          color: Colors.white,
-                          child: Icon(Icons.more_horiz),
-                        ),
-                        Stack(
-                            children: [
-                              Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(60.0),
-                                      image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
-                                      )
-                                  )
-                              ),
-                              Positioned(
-                                top: 0,
-                                right: 0,
-                                child: Container(
-                                  width: 20,
-                                  height: 20,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(10.0),
-                                      border: Border.all(width: 4.0, color: Colors.white)
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width * 0.5 - 15,
+                      height: MediaQuery.of(context).size.width * 0.5 - 10,
+                      margin: EdgeInsets.only(left: 10, right: 5, top: 10 ,bottom: 5),
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.centerRight,
+                            color: Colors.white,
+                            child: Icon(Icons.more_horiz),
+                          ),
+                          Stack(
+                              children: [
+                                Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(60.0),
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
+                                        )
+                                    )
+                                ),
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 20,
+                                    height: 20,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(10.0),
+                                        border: Border.all(width: 4.0, color: Colors.white)
+                                    ),
                                   ),
-                                ),
-                              )
-                            ]
-                        ),
-                        Container(
-                          child: Text("Clarie Wilson"),
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Container(
-                                color: Colors.white,
-                                width: 60,
-                                height: 55,
-                                margin: EdgeInsets.only(left: 15, right: 5),
-                                child: Icon(Icons.person_2_sharp
-                                ),
-                              ),
-                              Container(color: Colors.white,
+                                )
+                              ]
+                          ),
+                          Container(
+                            child: Text("Clarie Wilson"),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Container(
+                                  color: Colors.white,
                                   width: 60,
                                   height: 55,
-                                  margin: EdgeInsets.only(left: 5, right: 15),
-                                  child: Icon(Icons.message)
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    color: Colors.white,
-                    width: MediaQuery.of(context).size.width * 0.5 - 15,
-                    height: MediaQuery.of(context).size.width * 0.5 - 10,
-                    margin: EdgeInsets.only(left: 5, right: 10, top: 10 ,bottom: 5),
-                    child: Column(
-                      children: [
-                        Container(
-                          alignment: Alignment.centerRight,
-                          color: Colors.white,
-                          child: Icon(Icons.more_horiz),
-                        ),
-                        Stack(
-                            children: [
-                              Container(
-                                  width: 60,
-                                  height: 60,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(60.0),
-                                      image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
-                                      )
-                                  )
-                              ),
-                              Positioned(
-                                top: 0,
-                                right: 0,
-                                child: Container(
-                                  width: 20,
-                                  height: 20,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      borderRadius: BorderRadius.circular(10.0),
-                                      border: Border.all(width: 4.0, color: Colors.white)
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  child: Icon(Icons.person_2_sharp
                                   ),
                                 ),
-                              )
-                            ]
-                        ),
-                        Container(
-                          child: Text("Clarie Wilson"),
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Container(
-                                color: Colors.white,
-                                width: 60,
-                                height: 55,
-                                margin: EdgeInsets.only(left: 15, right: 5),
-                                child: Icon(Icons.person_2_sharp
+                                Container(color: Colors.white,
+                                    width: 60,
+                                    height: 55,
+                                    margin: EdgeInsets.only(left: 5, right: 15),
+                                    child: Icon(Icons.message)
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      width: MediaQuery.of(context).size.width * 0.5 - 15,
+                      height: MediaQuery.of(context).size.width * 0.5 - 10,
+                      margin: EdgeInsets.only(left: 5, right: 10, top: 10 ,bottom: 5),
+                      child: Column(
+                        children: [
+                          Container(
+                            alignment: Alignment.centerRight,
+                            color: Colors.white,
+                            child: Icon(Icons.more_horiz),
+                          ),
+                          Stack(
+                              children: [
+                                Container(
+                                    width: 60,
+                                    height: 60,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(60.0),
+                                        image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image:NetworkImage("https://i.pinimg.com/564x/26/91/c6/2691c65a2a8c4eed705d429f2bcbc6e1.jpg"),
+                                        )
+                                    )
                                 ),
-                              ),
-                              Container(color: Colors.white,
+                                Positioned(
+                                  top: 0,
+                                  right: 0,
+                                  child: Container(
+                                    width: 20,
+                                    height: 20,
+                                    decoration: BoxDecoration(
+                                        color: Colors.green,
+                                        borderRadius: BorderRadius.circular(10.0),
+                                        border: Border.all(width: 4.0, color: Colors.white)
+                                    ),
+                                  ),
+                                )
+                              ]
+                          ),
+                          Container(
+                            child: Text("Clarie Wilson"),
+                          ),
+                          Container(
+                            child: Row(
+                              children: [
+                                Container(
+                                  color: Colors.white,
                                   width: 60,
                                   height: 55,
-                                  margin: EdgeInsets.only(left: 5, right: 15),
-                                  child: Icon(Icons.message)
-                              )
-                            ],
+                                  margin: EdgeInsets.only(left: 15, right: 5),
+                                  child: Icon(Icons.person_2_sharp
+                                  ),
+                                ),
+                                Container(color: Colors.white,
+                                    width: 60,
+                                    height: 55,
+                                    margin: EdgeInsets.only(left: 5, right: 15),
+                                    child: Icon(Icons.message)
+                                )
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Container(
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
+      ]),
     );
   }
 }
