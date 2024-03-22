@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -72,45 +73,54 @@ class MyPage extends StatelessWidget {
           ],
       );
     }
-    Container itemFunc(double leftMargin, double rightMargin, double topMargin, double bottomMargin,
+    Widget itemFunc(double leftMargin, double rightMargin, double topMargin, double bottomMargin,
         String imageUrl, bool isOnline ){
-      return Container(
-        color: Colors.white,
-        width: size,
-        height: size,
-        margin: EdgeInsets.only(left: leftMargin, right: rightMargin, top: topMargin ,bottom: bottomMargin),
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.centerRight,
-              color: Colors.white,
-              child: Icon(Icons.more_horiz),
-            ),
-            buildProfileStack(imageUrl, isOnline),
-            Container(
-              child: Text("Clarie Wilson"),
-            ),
-            Container(
-              child: Row(
-                children: [
-                  Container(
-                    color: Colors.white,
-                    width: 60,
-                    height: 55,
-                    margin: EdgeInsets.only(left: 15, right: 5),
-                    child: Icon(Icons.person_2_sharp
-                    ),
-                  ),
-                  Container(color: Colors.white,
+      return GestureDetector(
+        onTap: (){ // 이벤트 처리 콜백함수
+          Navigator.of(context).push(
+            // 전환할 화면을 지칭하는 라우트 객체
+            MaterialPageRoute(
+                builder: (context) => MyPage2()),
+          );
+        },
+        child: Container(
+          color: Colors.white,
+          width: size,
+          height: size,
+          margin: EdgeInsets.only(left: leftMargin, right: rightMargin, top: topMargin ,bottom: bottomMargin),
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.centerRight,
+                color: Colors.white,
+                child: Icon(Icons.more_horiz),
+              ),
+              buildProfileStack(imageUrl, isOnline),
+              Container(
+                child: Text("Clarie Wilson"),
+              ),
+              Container(
+                child: Row(
+                  children: [
+                    Container(
+                      color: Colors.white,
                       width: 60,
                       height: 55,
-                      margin: EdgeInsets.only(left: 5, right: 15),
-                      child: Icon(Icons.message)
-                  )
-                ],
+                      margin: EdgeInsets.only(left: 15, right: 5),
+                      child: Icon(Icons.person_2_sharp),
+                    ),
+                    Container(
+                        color: Colors.white,
+                        width: 60,
+                        height: 55,
+                        margin: EdgeInsets.only(left: 5, right: 15),
+                        child: Icon(Icons.message),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       );
     }
@@ -128,7 +138,7 @@ class MyPage extends StatelessWidget {
                     children: <int>[0,1].map<Widget>((int e) {
                       return e == 0 ? itemFunc(10, 5, 10, 5,'https://i.pinimg.com/236x/dc/14/24/dc142465dadd5b622d5b28468e152456.jpg', true)
                           : itemFunc(5, 10, 10, 5,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ74oQ34k-uMihbMenZsa7ytEBedUf7U-KS6g&usqp=CAU',true);
-                    }).toList(),
+                    }).toList(), //foreach도 가능
                 ),
                 ),
                 Container(
@@ -154,6 +164,24 @@ class MyPage extends StatelessWidget {
                 ),
             ),
           );
+  }
+}
 
+class MyPage2 extends StatelessWidget {
+  const MyPage2({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: (){
+            Navigator.pop(context);
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
+        title: Text('Autopilot Tasks'),
+      ),
+    );
   }
 }
