@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -80,7 +79,7 @@ class MyPage extends StatelessWidget {
           Navigator.of(context).push(
             // 전환할 화면을 지칭하는 라우트 객체
             MaterialPageRoute(
-                builder: (context) => MyPage2()),
+                builder: (context) => Container()), //MyPage2()),
           );
         },
         child: Container(
@@ -130,7 +129,7 @@ class MyPage extends StatelessWidget {
       body: SingleChildScrollView(
           child: Container(
             color: Colors.grey,
-            child: Column(
+            child: Column( // ListView ( SCS , Containerm Colum ) 존재하는 객체를 재활용해서 나머지 목록의 ui를 보여줌 recycle list  // cf ) GridView
               children: [
                 Container(
                   child: Row(
@@ -167,21 +166,73 @@ class MyPage extends StatelessWidget {
   }
 }
 
-class MyPage2 extends StatelessWidget {
-  const MyPage2({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: (){
-            Navigator.pop(context);
-          },
-          icon: Icon(Icons.arrow_back),
-        ),
-        title: Text('Autopilot Tasks'),
-      ),
-    );
-  }
-}
+// class MyPage2 extends StatelessWidget {
+//   const MyPage2({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         leading: IconButton(
+//           onPressed: (){
+//             Navigator.pop(context);
+//           },
+//           icon: Icon(Icons.arrow_back),
+//         ),
+//         title: Text('Autopilot Tasks'),
+//       ),
+//       body: ListView.builder( // 콜백함수를 파라미터로 받음
+//         itemCount: 10, // 밑에 콜백이 10번 호출됨 ( requierd가 아니어서 없으면 무한대로 스크롤 되기 땜누에 꼭 지정!
+//         itemBuilder: (BuildContext context ,int e ) => ListTile( // item빌더 반환값 확인
+//     onTap: () {
+//         Navigator.of(context).pushReplacement(
+//         MaterialPageRoute(builder: (BuildContext context) => MyPage3(e: e)
+//         )
+//         appBar: AppBar(
+//         title: Text("index $e"),
+//         ),
+//       )
+//      ),
+//       ),
+//       //body: SingleChildScrollView(
+//         child: Container(
+//           child: Column(
+//             children: List<int>.generate(10, (index) => index).map<Widget>( //list 이름있는 생성자, list에 요소를 넣음
+//                 (int e) => ListTile(
+//                   onTap: () {
+//                     Navigator.of(context).pushReplacement(
+//                       MaterialPageRoute(builder: (BuildContext context) => MyPage3(e: e)
+//                       )
+//                         appBar: AppBar(
+//                           title: Text("index $e"),
+//                           ),
+//                         )
+//                       )
+//                     );
+//                   }, // 객체 지향 관점에서는 별로, 원래 정석은 감싸줘야함
+//                   leading: Icon(Icons.monitor),
+//                   title: Text('index $e'),
+//                   subtitle: Text('subtitle'),
+//                   trailing: Icon(Icons.next_plan_rounded),
+//                 )
+//             ).toList(), //
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
+//
+// class MyPage3 extends StatelessWidget {
+//   final int e; // 생성자에서 index 받아옴
+//   const MyPage3({super.key, required this.e});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("index ${this.e}"),
+//       ),
+//     );
+//   }
+// }
